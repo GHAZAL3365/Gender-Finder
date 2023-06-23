@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #7e5eff;
+}
+
+.container {
+  width: 90%;
+  max-width: 31.25em;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 3em 2em;
+  border-radius: 0.5em;
+}
+
+.app-title {
+  width: 80%;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  color: #020332;
+  letter-spacing: 0.2em;
+}
+
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1em;
+  margin-block: 2.5em;
+}
+
+#name,
+#submit {
+  font-size: 1em;
+  border-radius: 0.5em;
+}
+#name {
+  padding: 0.8em 0.5em;
+  border: 1px solid #020332;
+}
+
+#submit {
+  background-color: #7e5eff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#gender-icon {
+  width: 4.5em;
+  display: block;
+  margin: 2em auto 1em auto;
+  position: relative;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.female {
+  background-color: #ff5f96;
+}
+
+.male {
+  background-color: #7e5eff;
+}
+
+#info {
+  padding-block: 0.5em;
+  text-align: center;
+  border-radius: 0.9em;
+}
+
+#result-name {
+  display: block;
+  font-size: 2rem;
+  margin: 0.5em auto 1em auto;
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#gender {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+#prob {
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: #edecec;
+}
+
+#error {
+  color: red;
+  font-weight: 500;
+}
+
+/* Adding media queries */
+@media (max-width: 300px) {
+  .container {
+    padding: 1rem;
+  }
+  #info {
+    padding: 0.2em;
+    border-radius: 7px;
+  }
+
+  #result-name {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+
+  #gender {
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+  }
+
+  #prob {
+    letter-spacing: 0.175em;
+  }
+
+  #gender-icon {
+    width: 3.7em;
+    display: block;
+    margin-top: 1em;
+    margin-inline: auto;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #submit {
+    padding-block: 0.75rem;
+  }
+
+  .app-title {
+    width: 100%;
+    letter-spacing: 0.1em;
+    font-size: 22px;
+  }
+}
